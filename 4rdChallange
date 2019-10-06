@@ -10,10 +10,7 @@ import sys
 
 def repeatedString(s, n):
     NumberAs = s.count('a') 
-    if n % len(s) == 0:
-        return NumberAs* int (n/len(s))
-    else:
-        return NumberAs* int (n/len(s)) + s.count('a', 0, n % len(s))
+    return NumberAs * (n // len(s)) + s.count('a', 0, n % len(s))
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
